@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <!-- ****************  INICIO DA SECAO DE APPENDERS  *********************** -->
+
+	<appender name="file01" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${sulamerica.files}/log/novaaplicacao/novaaplicacaoDebug.log"/>
+        <param name="MaxFileSize" value="4096KB"/>  
+		<param name="MaxBackupIndex" value="15"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%t] %p %c %x %d - %m%n"/>
+		</layout>
+	</appender>	
+	
+	<appender name="file02" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${sulamerica.files}/log/novaaplicacao/novaaplicacaoError.log"/>
+		<param name="MaxFileSize" value="1024KB"/>
+		<param name="MaxBackupIndex" value="15"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%t] %p %c %x %d - %m%n"/>
+		</layout>
+	</appender>	
+
+  <!-- ****************  FINAL DA SECAO DE APPENDERS  *********************** -->
+
+  <!-- ****************  INICIO DA SECAO DAS CATEGORIAS  ******************** -->
+ 	<logger name="debugAuto">
+		<level value="DEBUG" />
+		<appender-ref ref="file01"  />		
+	</logger>
+	
+	<logger name="errorAuto">
+		<level value="DEBUG" />
+		<appender-ref ref="file02"  />
+	</logger>
+	
+  <!-- ****************  FINAL DA SECAO DE LOGGERS  ************************ -->
+</log4j:configuration>
