@@ -23,7 +23,7 @@ public class BlankRest {
 	@RequestMapping(value = "/somemethodblank",method = RequestMethod.POST, produces = "application/json")
 	public RetornoServicosNomeDaAplicacao someMethodBlank(@RequestBody BlankRestVO blankRestVO) {
 		
-		Log4j.debug("# Entrei BlankRest teste - Metodo: someMethodBlank");
+		Log4j.debug("# Entrei BlankRest teste2 - Metodo: someMethodBlank");
 		
 		RetornoServicosNomeDaAplicacao retornoServicos = null;
 		
