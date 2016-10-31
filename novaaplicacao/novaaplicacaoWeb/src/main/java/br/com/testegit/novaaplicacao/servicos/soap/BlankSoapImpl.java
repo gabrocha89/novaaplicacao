@@ -23,10 +23,6 @@ public class BlankSoapImpl extends SpringBeanAutowiringSupport implements BlankS
 		
 		RetornoServicosNomeDaAplicacao retornoServicos = null;
 		
-		//As duas linhas abaixo sao para geracao do Objeto do JWT(Token) e extracao das suas informacoes, caso necessario.
-		AuthenticatedUser userLogged = (AuthenticatedUser)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		String usuario = userLogged.getUsername();	
-		
 		try {
 			retornoServicos = controleBlank.someControl(str);
 		} catch (Exception e){
