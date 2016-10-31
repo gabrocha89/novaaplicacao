@@ -3,13 +3,11 @@ package br.com.testegit.novaaplicacao.servicos.soap;
 import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import br.com.testegit.novaaplicacao.bean.RetornoServicosNomeDaAplicacao;
 import br.com.testegit.novaaplicacao.controle.IControleBlank;
 import br.com.testegit.novaaplicacao.log.Log4j;
-import br.com.testegit.novaaplicacao.servicos.security.AuthenticatedUser;
 
 @WebService
 public class BlankSoapImpl extends SpringBeanAutowiringSupport implements BlankSoap {
